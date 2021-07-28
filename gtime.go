@@ -90,7 +90,7 @@ func getNow(timeout time.Duration) (
 	if err != nil {
 		return time.Time{}, 0, err
 	}
-	b := make([]byte, 128)
+	b := make([]byte, 256)
 	err = c.SetReadDeadline(deadline)
 	if err != nil {
 		return time.Time{}, 0, err
